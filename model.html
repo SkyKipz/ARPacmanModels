@@ -87,6 +87,12 @@ window.addEventListener('keydown', function(event) {
         texto = '';
     }
 });
+	
+elemento.addEventListener("touchstart", function(event) {
+	event.preventDefault(); // evita el comportamiento predeterminado, como desplazamiento o zoom
+	camera.position.set(0, 0, 0); // Cambiar la posicion a la inicial para usar el AR
+        texto = '';
+});
 
 
 
