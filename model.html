@@ -32,7 +32,6 @@ var mesh1, mesh2, mesh3, mesh4;
 initializeAR();
 
 //texto 3D
-// Crea un texto 2D plano
 const fontLoader = new THREE.FontLoader();
 var textMesh;
 var texto = 'Puedes arrastrar el texto manteniendo el\nclick y arrastrando arriba o abajo.\n\n                     Pacman AR\n\nEste programa es una pequeña muestra\nde los modelos 3D usados en mi recreación\ndel famoso videojuego Pac-Man, donde\npodrás usar diferentes imagenes para\ncargar los modelos en Realidad Aumentada,\nen específico haz uso de la imagen Hiro, A,\nB y el Kanji de persona.\n\nBy: Aaron Octavio Morales Valencia\n\nPresiona Enter para continuar.';
@@ -61,7 +60,7 @@ function onMouseMove(event) {
         const mouseY = event.clientY;
         const deltaX = mouseX - prevMouseX;
         const deltaY = mouseY - prevMouseY;
-        textMesh.position.y -= deltaY * 0.01; // Ajustar la posición en el eje Y (diagonal opuesta)
+        textMesh.position.y -= deltaY * 0.01; // Ajustar la posición en el eje Y 
         textMesh.position.z += deltaY * 0.01; // Ajustar la posición en el eje Z
         prevMouseX = mouseX;
         prevMouseY = mouseY;
